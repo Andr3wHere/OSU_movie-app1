@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import MovieList from './components/MovieList';
 import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
 import AddFavourite from "./components/AddFavourite.jsx";
 import RemoveFavourite from "./components/RemoveFavourite.jsx";
 
-const OMDB_API_KEY = 'aeb2b829';
+const OMDB_API_KEY = 'e0f18418';
 const OMDB_BASE_URL = 'https://www.omdbapi.com/';
 const MIN_SEARCH_LENGTH = 3;
 

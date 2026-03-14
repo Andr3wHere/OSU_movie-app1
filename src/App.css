@@ -1,6 +1,6 @@
 body {
-  background: #141414;
-  color: #fff;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 .movie-app .movie-row {
@@ -81,7 +81,7 @@ span {
   gap: 12px;
   padding: 20px;
   font-size: 1.1em;
-  color: #333;
+  color: var(--text-color);
 }
 
 .status-message span {
@@ -93,7 +93,8 @@ span {
 }
 
 .info-message {
-  color: #555;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
 .spinner {
@@ -107,4 +108,55 @@ span {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.movie-detail-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-detail-content {
+  background-color: var(--modal-background-color);
+  color: var(--modal-text-color);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--modal-border-color);
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.movie-detail-content .close {
+  color: var(--close-button-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.movie-detail-content .close:hover,
+.movie-detail-content .close:focus {
+  color: var(--close-button-hover-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.detail-text {
+  color: var(--modal-text-color);
+}
+
+.detail-text .list-group-item {
+  color: var(--modal-text-color);
+}
+
+.detail-text .text-muted {
+  color: var(--muted-text-color) !important;
 }
